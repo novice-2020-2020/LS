@@ -1,0 +1,17 @@
+{
+"language selection": "Language: e/h?",
+
+"e":{
+  "welcome": "Welcome to the calculator",
+  "number1": "please enter the first number",
+  "number2": "please enter the second number",
+  "operation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide"
+},
+"h": {
+  "welcome": "Calculator mein aapka swagat hai",
+  "number1": "Kripya pehla number daalein",
+  "number2": "Kripya dusra number daalein",
+  "operation": "Kya karna chahte hain? \n1) jod 2) ghataav 3) guna 4) vibhajan"
+}
+
+}
