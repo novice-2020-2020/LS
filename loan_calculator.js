@@ -41,15 +41,3 @@ function loanCalculator() {
 }
 
 loanCalculator();
-// const readline = require('readline-sync');
-// let tenure = readline.question("Please enter the laon duration in 'years months': ");
-
-//   let tenureYears = parseFloat(tenure.split(' ')[0]);
-//   let tenureMonths = parseFloat(tenure.split(' ')[1]);
-//   if(Number.isNaN(tenureMonths)) {
-//     tenureMonths = 0;
-//   }
-//   else {
-
-//   }
-//   console.log(tenureYears, tenureMonths)
