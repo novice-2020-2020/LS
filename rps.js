@@ -63,24 +63,25 @@ function rockPaperScissors() {
   rps();
 
   function playAgain() {
+    const readline = require('readline-sync');
+    
     function validPlayAgain(playAgain) {
-      while (['y', 'n'].includes(playAgain) === false) {
-        console.log('please enter a valid choice');
-      }
+      return ['y', 'n'].includes(playAgain);
     }
 
     let playAgainUserInput = readline.question("would you like to play again? Please 'y' for yes, 'n' for no ").toLowerCase();
 
-    validPlayAgain(playAgainUserInput);
+    while (validPlayAgain(playAgainUserInput)===false) {
+      console.log('Please enter a valid choice');
+      playAgainUserInput = readline.question("would you like to play again? Please 'y' for yes, 'n' for no ").toLowerCase();
+    }
 
-    console.log(playAgainUserInput);
-
-    while (playAgainUserInput === 'y') {
+    while (playAgainUserInput === 'y' || playAgainUserInput === 'yes') {
       rps();
       playAgainUserInput = readline.question("would you like to play again? Please 'y' for yes, 'n' for no ").toLowerCase();
     }
   }
-  playAgain();
+  playAgain()
   console.clear();
 }
 
