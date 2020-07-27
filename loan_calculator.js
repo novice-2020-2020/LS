@@ -21,7 +21,7 @@ function loanCalculator() {
     apr = readline.question('please enter a valid APR: ');
   }
 
-  const tenure = readline.question("Please enter the laon duration in 'years months': ");
+  const tenure = readline.question("Please enter the loan duration in 'years months': ");
 
   const tenureYears = parseFloat(tenure.split(' ')[0]);
   let tenureMonths = parseFloat(tenure.split(' ')[1]);
