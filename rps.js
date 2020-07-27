@@ -1,14 +1,15 @@
 function rockPaperScissors() {
   const readline = require('readline-sync');
+  const VALID_CHOICES = [1, 2, 3];
   function rps() {
-    function validUserInput() {
-      while ([1, 2, 3].includes(userInput) === false) {
+    function validUserInput(inp) {
+      while (!VALID_CHOICES.includes(inp)) {
         console.log('please choose a valid input');
-        userInput = parseInt(readline.question('Please enter your choice\n1 for Rock | 2 for Scissors | 3 for Paper: '));
+        inp = parseInt(readline.question('Please enter your choice\n1 for Rock | 2 for Scissors | 3 for Paper: '), 10);
       }
     }
 
-    let userInput = parseInt(readline.question('Please enter your choice\n1 for Rock | 2 for Scissors | 3 for Paper: '));
+    const userInput = parseInt(readline.question('Please enter your choice\n1 for Rock | 2 for Scissors | 3 for Paper: '), 10);
 
     validUserInput(userInput);
 
@@ -29,7 +30,7 @@ function rockPaperScissors() {
     function getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
     }
-    const computerInput = getRandomInt(3)+1;
+    const computerInput = getRandomInt(3) + 1;
     switch (computerInput) {
       case 1:
         console.log('Computer chose 1 - Rock');
@@ -63,15 +64,13 @@ function rockPaperScissors() {
   rps();
 
   function playAgain() {
-    const readline = require('readline-sync');
-    
     function validPlayAgain(playAgain) {
       return ['y', 'n'].includes(playAgain);
     }
 
     let playAgainUserInput = readline.question("would you like to play again? Please 'y' for yes, 'n' for no ").toLowerCase();
 
-    while (validPlayAgain(playAgainUserInput)===false) {
+    while (validPlayAgain(playAgainUserInput) === false) {
       console.log('Please enter a valid choice');
       playAgainUserInput = readline.question("would you like to play again? Please 'y' for yes, 'n' for no ").toLowerCase();
     }
@@ -81,7 +80,7 @@ function rockPaperScissors() {
       playAgainUserInput = readline.question("would you like to play again? Please 'y' for yes, 'n' for no ").toLowerCase();
     }
   }
-  playAgain()
+  playAgain();
   console.clear();
 }
 
