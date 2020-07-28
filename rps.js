@@ -68,24 +68,24 @@ function rpsGame() {
 
   console.log(`Total games played: ${gameCount} | Your score: ${userWinCount} | Computer's score: ${computerWinCount} | Games tied: ${gameCount - computerWinCount - userWinCount}\n`);
   divider();
-  gameCount += 1;
+  // gameCount += 1;
 }
 
 let repeat = 'y';
 
-function playAgain(count) {
+function playAgain() {
   const validRepeat = ['y', 'yes'];
-  while (count <= 5 && validRepeat.includes(repeat)) {
-    if (count > 5) {
+  while (gameCount <= 5 && validRepeat.includes(repeat)) {
+    if (gameCount > 5) {
       console.log('You\'ve played 5 games');
-    } else if (count === 5) {
+    } else if (gameCount === 5) {
       rpsGame();
-      count += 1;
+      gameCount += 1;
       // console.log(count);
     } else {
       rpsGame();
       repeat = String(readline.question('Would you like to play again? ')).toLowerCase();
-      count += 1;
+      gameCount += 1;
     }
   }
 }
