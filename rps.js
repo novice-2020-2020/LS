@@ -73,7 +73,7 @@ function rpsGame() {
 
 let repeat = 'y';
 
-function playAgain() {
+function playAgain () {
   const validRepeat = ['y', 'yes'];
   while (gameCount <= 5 && validRepeat.includes(repeat)) {
     if (gameCount > 5) {
@@ -90,4 +90,4 @@ function playAgain() {
   }
 }
 
-playAgain(gameCount);
+playAgain (gameCount);
